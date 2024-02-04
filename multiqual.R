@@ -1,19 +1,9 @@
 library(Rsamtools)
 library(DuffyTools)
 
-
-if (!is.list(targets)) {
-  if (file.exists(targets))
-    targets <- readTargets(targets)
-  else
-    stopwrap("targets must be either the result of readTargets ",
-             "function or a valid targets file!")
-}
-
 # The BAM files
-bams <- unlist(targets$files,use.names=FALSE)
-nams <- unlist(targets$samples,use.names=FALSE)
-
+targets <- "yourbamlistfile.txt"
+bam <- unlist(targets,use.names=FALSE)
 
 getbasequal <- function(bam){
   
@@ -40,4 +30,4 @@ getbasequal <- function(bam){
 
 qual_list <- lapply(bam,getbasequal)
 
-#write.table(bqualt_num, "/media/galadriel/fleming/semeli_spanou_work/sra_data/testsamplequal.txt")
+write.table(bqualt_num, "sample_qual.txt")
