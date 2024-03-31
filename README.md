@@ -16,7 +16,7 @@ The primary aim of this work is to assess the quality of gene expression data st
   - Additional density plots and histograms were derived from FastQC reports using the `quality_graph.r` script.
 
 ## Data Files
-Scripts utilize large tables for generating graphs, specifically `Total_Table_graphs.xlsx` and `Total_Median_Quality.xlsx`.
+Scripts utilize large tables for generating graphs, specifically `total_table_graphs.xlsx` and `total_median_quality.xlsx`.
 
 ## Tags
 `#thesis` `#R` `#RNA-seq` `#bioinformatics`
