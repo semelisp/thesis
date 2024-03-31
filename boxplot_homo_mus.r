@@ -8,7 +8,7 @@ library(stringr)
 library(reshape2)
 library(hrbrthemes)
 
-
+#Homo Sapiens boxplot 
 homolist <- read.table("homolist_path.txt")
 homolist_long <- melt(homolist)
 
@@ -21,7 +21,7 @@ plot_homo <- ggplot(homolist_long, aes(x = variable, y = value)) +
   theme_ipsum() + xlab("Position in read") 
 plot_homo
 
-
+#Mus Musculus boxplot
 muslist <- read.table("muslist_path.txt")
 muslist_long <- melt(muslist)
 
